@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Nike product card">
+	<meta name="author" content="Andreii">
+	<title>Nike Product</title>
+
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="container">
+
+		<div class="container__logo">
+			<a class="logo" href="/">
+				<img class="logo__img" src="images/logo.png" alt="Nike logo">
+			</a>
+		</div>
+
+		<div class="slider container__slider">
+			<img class="slider__img" src="images/sneakers.png" alt="Product">
+			<ul class="slider__navigation">
+				<li class="slider__point slider__point--active"></li>
+				<li class="slider__point slider__point--fill--white"></li>
+				<li class="slider__point slider__point--fill--red"></li>
+				<li class="slider__point slider__point--fill--blue"></li>
+			</ul>
+		</div>
+
+		<div class="product-info container__product-info">
+			<h2 class="product-info__name">Nike SB Stefan  Janoski Max</h2>
+			<p class="product-info__use">Unisex Skateboarding Shoe</p>
+			<form class="product-rating">
+				<label class="product-rating__label">
+					<input class="product-rating__choice" type="radio" name="stars" value="1">
+					<span class="product-rating__star">★</span>
+				</label>
+				<label class="product-rating__label">
+					<input class="product-rating__choice" type="radio" name="stars" value="2">
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+				</label>
+				<label class="product-rating__label">
+					<input class="product-rating__choice" type="radio" name="stars" value="3">
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+				</label>
+				<label class="product-rating__label">
+					<input class="product-rating__choice" type="radio" name="stars" value="4">
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+				</label>
+				<label class="product-rating__label">
+					<input class="product-rating__choice" type="radio" name="stars" value="5">
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+					<span class="product-rating__star">★</span>
+				</label>
+			</form>
+			<button class="button-size properties">Size</button>
+			<button class="button-qty properties">Qty</button>
+			<button class="add-cart properties">Add to cart</button>
+		</div>
+
+	</div>
+	<!-- LiveReload Script -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

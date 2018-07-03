@@ -1,0 +1,255 @@
+@font-face {
+	font-family: Museo;
+	src: url('fonts/Museo/museosanslight-webfont.eot');
+	src: url('fonts/Museo/museosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/Museo/museosanslight-webfont.woff2') format('woff2'),
+	url('fonts/Museo/museosanslight-webfont.woff') format('woff'),
+	url('fonts/Museo/museosanslight-webfont.ttf') format('truetype'),
+	url('fonts/Museo/museosanslight-webfont.svg#museo_sans_cyrl100') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+body {
+	min-width: 800px;
+	background-color: #c5c5c8;
+	background-image: url(../images/bg_noise.png), url(../images/bg_lines.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container {
+	width: 686px;
+	height: 420px;
+	margin: 160px auto;
+	padding: 24px 21px 19px;
+	box-shadow: 0 0 68px rgba(0, 0, 0, .85);
+	border-radius: 12px;
+	background: #111a28;
+}
+
+.logo {
+	display: block;
+	width: 66px;
+	height: 33px;
+}
+
+.logo:hover {
+	opacity: .8;
+}
+
+.container__slider {
+	float: left;
+}
+
+.slider {
+	width: 379px;
+	position: relative;
+	height: calc(100% - 33px);
+}
+
+.slider__img {
+	width: 329px;
+	position: absolute;
+	top: 85px;
+	left: 15px;
+}
+
+.slider__navigation {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	font-size: 0;
+}
+
+.slider__point {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	vertical-align: middle;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+.slider__point--active {
+	width: 16px;
+	height: 16px;
+	background: url(../images/active_bullet.png) no-repeat;
+}
+
+.slider__point--fill--white {
+	background: url(../images/white_bullet.png) no-repeat;	
+}
+
+.slider__point--fill--red {
+	background: url(../images/red_bullet.png) no-repeat;	
+}
+
+.slider__point--fill--blue {
+	background: url(../images/blue_bullet.png) no-repeat;	
+	margin-right: 0;
+}
+
+.product-info {
+	width: 265px;
+	padding: 21px 35px 0 46px;
+}
+
+.container__product-info {
+	float: right;
+}
+
+.product-info {
+	line-height: 26px;
+	letter-spacing: .2px;
+	font-family: Museo, sans-serif;
+	color: #e1e1e1;
+	font-size: 0;
+}
+
+.product-info__name {
+	font-size: 24px;
+	margin-bottom: 12px;
+}
+
+.product-info__use {
+	font-size: 14px;
+	opacity: .54;
+	margin-bottom: 18px;
+}
+
+.product-rating {
+	position: relative;
+	height: 15px;
+	margin-bottom: 27px;
+	line-height: 15px;
+	font-size: 15px;
+}
+
+.product-rating__label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.product-rating__label:nth-child(1) {
+	z-index: 5;
+}
+
+.product-rating__label:nth-child(2) {
+	z-index: 4;
+}
+
+.product-rating__label:nth-child(3) {
+	z-index: 3;
+}
+
+.product-rating__label:nth-child(4) {
+	z-index: 2;
+}
+
+.product-rating__label:nth-child(5) {
+	z-index: 1;
+}
+
+.product-rating__choice {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.product-rating__star {
+	float: left;
+	color: transparent;
+}
+
+.product-rating__label:last-child .product-rating__star {
+	color: #9da1a6;
+}
+.product-rating__choice:checked ~ .product-rating__star,
+.product-rating__label:hover .product-rating__star {
+	color: #f7bf16;
+}
+
+.properties {
+	position: relative;
+	padding: 9px 30px 9px 12px;
+	margin-right: 2px;
+	margin-bottom: 29.5px;
+	border: 1px solid;
+	border-color: rgba(255, 255, 255, .26);
+	background: rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	font-size: 14px;
+	font-family: Museo, sans-serif;
+	color: #e1e1e1;
+	cursor: pointer;
+}
+
+.button-size:hover,
+.button-qty:hover {
+	background: rgba(76, 82, 90, .26);
+}
+
+.properties::after {
+	content: "";
+	width: 11px;
+	height: 6px;
+	background: url(../images/arrow_down.png) no-repeat;
+	position: absolute;
+	top: 44%;
+	right: 10px;
+}
+
+.add-cart {
+	width: 100%;
+	padding: 13px 53px;
+	background: rgba(76, 82, 90, .26);
+}
+
+.add-cart:hover {
+	background: rgba(41, 227, 234, .26)
+}
+
+.add-cart.properties::after {
+	display: none;
+}
+
+
